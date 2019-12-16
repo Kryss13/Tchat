@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Chat Box</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!--Google Font-->
+  <link href="https://fonts.googleapis.com/css?family=Gupter&display=swap" rel="stylesheet">
+
+  <!--JQUERY-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--Template Mustache-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.js"></script>
+</head>
+
+<body>
+  <div id="conteneur" class="container">
+    <h1 id="header" class="grey">Chat Box</h1>
+
+    <div id="users"></div>
+    <div id="messages">
+      <div class="message" id="msgtpl" style="display: none;">
+          <div class="info">
+            <div class="avatar">
+                <img src="{{{user.avatar}}}" alt="avatar">
+                <p class="username p">{{user.username}}</p>
+            </div>
+              <p>{{message}}</p>
+              <span class="date">{{h}}:{{m}}</span>
+          </div>
+      </div>
+    </div>
+
+    <div id="login">
+      <form action="" class="formulaire" id="loginForm">
+        <h2 class="grey">Bienvenue sur le Tchat</h1>
+        <p class="grey p">Ceci est un tchat en Node.js, veuillez entrer votre pseudo et votre mail (utilisé pour l'avatar Gravatar)</p>
+        <input type="text" name="login" id="username" placeholder="Nom d'utilisateur">
+        <input type="text" name="email" id="mail" placeholder="E-mail">
+        <input type="submit" value="Envoyer">
+      </form>
+    </div>
+
+    <form action="" class="formulaire" id="form">
+      <input type="text" id="message" class="text" placeholder="Message">
+      <input type="submit" id="send" value="Envoyer mon message" class="submit">
+    </form>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+
+  
+
+</body>
+
+</html>

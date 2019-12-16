@@ -1,0 +1,210 @@
+/* PENSER A METTRE DES COMMENTAIRES ENTRE DEUX ELEMENTS POUR ANNULER LES MARGES EN CAS DE CHANGEMENT DE DISPLAY (EX:DISPLAY:INLINE-BLOCK)*/
+
+/*ORDRE DE DECLARATION EN CSS:
+- DISPLAY ETC
+- POSITION
+- CE QUI CONCERNE LE BLOC (EX:MARGIN PADDING ETC)
+- CE QUI CONCERNE LE TEXTE (EX: FONT; TEXT ALIGN ETC)
+- CE QUI CONCERNE LA DÃ‰CO (EX: COLOR, TRANSITION ETC) */
+
+/* FONT FACE */
+/* Appelle les polices de la page */
+
+/*GLOBAL */
+/* Balises et class appelÃ©s Ã  plusieurs endroits dans la page */
+*{
+    box-sizing: border-box;
+  }
+  html {font-size: 62.5%}
+  
+  body {
+      margin: 0;
+      padding: 0;;
+      font-size: 1.6rem;
+      font-family: "Roboto Slab",Arial,sans-serif;
+      background-image: url(img/bg.jpg);
+      line-height: 1.6;
+      overflow-x: hidden;
+  }
+  a, a:hover, a:visited, a:active {
+      text-decoration: none;
+  }
+  .container{
+    padding: 3em 2em 2em 2em;
+  }
+  img{
+    max-width: 100%;
+  }
+  #hidden{
+    display: none;
+  }
+  .hidden{
+    display: none
+  }
+  h1, h2, h3, h4{
+    text-align: center;
+    font-family: 'Gupter', cursive;
+  }
+  p{
+    text-align: center;
+    font-family: 'Gupter', cursive;
+  }
+  .h1HomePage{
+    font-size: 2em;
+  }
+  .h1{
+    margin-top: 0;
+    font-size: 2em;
+  }
+  .h2{
+    margin-top: 0;
+    font-size: 1.8em;
+  }
+  .p{
+    font-size: 1.2em;
+  }
+  .center{
+    display: block;
+    text-align: center;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .red{
+    color: #d63031;
+  }
+  .grey{
+    color: #ced6e0;
+  }
+  .activeHeader{
+    color: #B28564 !important;
+  }
+  .labelMessage{
+    display: block;
+    font-size: 1.5em;
+    padding-right: 18em;
+  }
+  textarea{
+    display: block;
+    margin: auto auto 2em auto;
+    padding: 1rem;
+    border-radius: 20px;
+    resize: none; 
+    border: 2px solid #B28564;
+  }
+  #historique{
+    color: #fff;
+  }
+  .info{
+    width: 25%;
+    background-color: #c7ecee;
+    padding: 1em;
+    margin: auto auto 0.8em auto;
+    border-radius: 20px;
+    border: solid;
+  }
+  .username{
+    padding-left: 0.5em;
+    font-weight: bold;
+  }
+  .avatar{
+    display: flex;
+  }
+  #users{
+    display: flex;
+  }
+  .imgAvatar{
+    margin-left: 0.6em;
+  }
+  .paraAvatar{
+    margin: 0 0 0 0.4em;
+  }
+  /* MARGES */
+  .small-padding {padding: 10px}
+  .regular-padding {padding: 25px}
+  .big-padding {padding: 50px}
+  
+  .small-margin {margin: 10px}
+  .regular-margin {margin: 25px}
+  .big-margin {margin: 50px}
+  
+  .no-padding {padding: 0}
+  .no-margin {margin: 0}
+  
+  .no-padding-top{padding-top: 0}
+  .no-padding-right {padding-right: 0}
+  .no-padding-bottom{padding-bottom: 0}
+  .no-padding-left{padding-left: 0}
+  
+  .no-margin-top{margin-top: 0}
+  .no-margin-right{margin-right: 0}
+  .no-margin-bottom{margin-bottom: 0}
+  .no-margin-left{margin-left: 0}
+  
+  /* Evolution ultime du .clear */
+  .clear::after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      line-height: 0;
+      visibility: hidden;
+  }
+  
+  /* Button */
+  .buttonSend{
+    display: block;
+    margin: auto;
+    padding: 1em;
+    box-shadow: 0 0 0 3px #B28564 inset;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+  }
+  .buttonSend:hover, .buttonSend:focus{
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* FORMULAIRE */
+/* Ce qui concerne les formulaires */
+legend{
+  padding: 0 0.2em;
+  text-align: center;
+  font-size: 1.7em;
+}
+input, textarea, fieldset{
+  width: 15%;
+  margin: auto auto 7px auto;
+  border: 1px solid #ced6e0;
+}
+.borderNone{
+  border: none;
+}
+.formulaire{
+  display: flex;
+  flex-direction: column;
+}
+input[type="submit"]{
+  display: block;
+  margin: auto auto 7px auto;
+  padding: 0.5em;
+  box-shadow: 0 0 0 1px #ced6e0 inset;
+  color: #1e272e;
+  border-radius: 5px;
+  border: none;
+}
+input[type="submit"]:hover, input[type="submit"]:focus{
+  color: #191919;
+  box-shadow: 0 0 0 1px #191919 inset;
+	cursor: pointer;
+}
+  
+  /* FOOTER */
+  /* Ce qui concerne le footer */
+  #footer{
+    text-align: center;
+    color: #fff;
+  }
